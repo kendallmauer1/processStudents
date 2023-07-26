@@ -34,7 +34,7 @@ with open('students.csv', 'r') as infile:
     header = next(read)
 
 #create an outfile object for the pocessed record
-    with open ('processedStudents.csv', 'a') as outfile:
+    with open ('processedStudents.csv', 'w') as outfile:
         write = csv.writer(outfile)
 
 
@@ -57,7 +57,7 @@ with open('students.csv', 'r') as infile:
 
     # append the record to the dictionary with the student id as the Key
     # and the value as the GPA
-    student_dict['stud_id'] = 'gpa'
+    student_dict[stud_id] = gpa
 
 
 
@@ -68,8 +68,8 @@ for stud_id, gpa in student_dict.items():
     print(f"{stud_id},{gpa}")
 
 #Print the student id 
-if stud_id in  
-    print(student_dict['567890123'])
+if stud_id in student_dict:
+    print(stud_id)
 '''
 #print out the corresponding GPA from the dictionary
 for student_id, gpa in student_dict.items():
