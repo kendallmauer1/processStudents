@@ -31,7 +31,7 @@ with open('students.csv', 'r') as infile:
     read = csv.reader(infile)
 
 #skip the header row
-    header = next(read)
+    header_row = next(read)
 
 #create an outfile object for the pocessed record
     with open ('processedStudents.csv', 'w') as outfile:
@@ -57,7 +57,7 @@ with open('students.csv', 'r') as infile:
 
     # append the record to the dictionary with the student id as the Key
     # and the value as the GPA
-    student_dict["stud_id"] = "gpa"
+    student_dict[stud_id] = gpa
 
 
 
@@ -70,12 +70,12 @@ for stud_id, gpa in student_dict.items():
 #Print the student id 
 if stud_id in student_dict:
     print(stud_id)
-'''
-#print out the corresponding GPA from the dictionary
-for student_id, gpa in student_dict.items():
-    print(f"The type of pet is: {i} and the name of the pet is: {j}")
 
-'''
+#print out the corresponding GPA from the dictionary
+    studid = student_dict['567890123']
+    print(studid)
+
+
 
 
 
