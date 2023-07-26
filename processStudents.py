@@ -57,7 +57,7 @@ with open('students.csv', 'r') as infile:
 
     # append the record to the dictionary with the student id as the Key
     # and the value as the GPA
-    student_dict[stud_id] = gpa
+    student_dict["stud_id"] = "gpa"
 
 
 
@@ -65,7 +65,7 @@ with open('students.csv', 'r') as infile:
 
 #print the entire dictionary
 for stud_id, gpa in student_dict.items():
-    print(f"{stud_id},{gpa}")
+    print(student_dict)
 
 #Print the student id 
 if stud_id in student_dict:
